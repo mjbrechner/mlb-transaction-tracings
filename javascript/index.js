@@ -18,7 +18,7 @@ const formattedCurrentDate = '' + year + monthString + dayString;
 
 console.log(`month start: ` + formattedCurrentMonthStartDate + "   This month:" + formattedCurrentDate);
 
-const transactionDateRange = `http://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedCurrentMonthStartDate + `'&end_date='` + formattedCurrentDate + `'`;
+const transactionDateRange = `https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedCurrentMonthStartDate + `'&end_date='` + formattedCurrentDate + `'`;
 
 
 
@@ -26,7 +26,7 @@ const listMaker = document.getElementById("transaction-list");
 
 let teamColor1 = "white";
 let teamColor2 = "black";
-// fetch(`http://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedCurrentMonth + `'&end_date='` + formattedCurrentDate + `'`)
+// fetch(`https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedCurrentMonth + `'&end_date='` + formattedCurrentDate + `'`)
 // .then((response) => response.json())
 // .then((data) => console.log(data));
 
