@@ -1,0 +1,57 @@
+/* Palette from Color Hunt
+https://colorhunt.co/palette/100f0f0f3d3ee2dcc8f1f1f1
+#100F0F
+#0F3D3E
+#E2DCC8
+#F1F1F1 */
+
+body {
+    background-color: #0F3D3E;
+    color: #E2DCC8;
+    font-size: 1.2em;
+}
+
+
+header {
+   text-align: center;
+}
+.main-container {
+    display: flex;
+
+}
+
+#menu {
+width: 100px;
+padding: 5px;
+}
+
+
+#transaction-list {
+    background-color: #E2DCC8;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 2px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+#player-display {
+    width: 600px;
+    padding: 3px 10px;
+    margin: 2px;
+    /* border: 2px;
+    border-style: solid; */
+    border-radius: 5px;
+}
+
+#player-details1,
+#player-details2 {
+    display: none;
+}
+
+.profile-pic {
+    width: 3em;
+    height: 3em;
+}
