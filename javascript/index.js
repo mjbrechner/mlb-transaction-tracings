@@ -12,44 +12,19 @@ const monthNames = ["January", "February", "March", "April", "May", "June", "Jul
 const currentMonthName = monthNames[today.getMonth()];
 const year = today.getFullYear();
 const lastYear = today.getFullYear() - 1;
-const formattedCurrentMonthStartDate = '' + year + monthString + `01`;
+const formattedLastYearDate = '' + lastYear + monthString + dayString;
 
 const formattedCurrentDate = '' + year + monthString + dayString;
 
-console.log(`month start: ` + formattedCurrentMonthStartDate + "   This month:" + formattedCurrentDate);
 
-const transactionDateRange = `https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedCurrentMonthStartDate + `'&end_date='` + formattedCurrentDate + `'`;
-
+const transactionDateRange = `https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedLastYearDate + `'&end_date='` + formattedCurrentDate + `'`;
 
 
 const listMaker = document.getElementById("transaction-list");
 
 let teamColor1 = "white";
 let teamColor2 = "black";
-// fetch(`https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedCurrentMonth + `'&end_date='` + formattedCurrentDate + `'`)
-// .then((response) => response.json())
-// .then((data) => console.log(data));
 
-
-
-// async function loadMLBStuff() {
-// const response = await fetch(transactionDateRange);
-// const info = await response.json();
-// console.log(`HELLO`);
-// console.log(`Info: ` + info);
-// }
-
-// loadMLBStuff();
-
-
-
-
-
-// const getStuff = fetch(transactionDateRange)
-// .then(res => res.json())
-// .then(data => console.log(data));
-
-// console.log(`hi   ` + res.json());
 
 const MLBTeamNames = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago White Sox", "Chicago Cubs", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Yankees", "New York Mets", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"];
 
@@ -59,21 +34,25 @@ async function getTransactionData() {
     const response = await fetch(transactionDateRange);
     const data = await response.json();
     console.log(data.transaction_all.queryResults.row[0]);
-    const allPlayers = data.transaction_all.queryResults.row;
+    const allPlayers = data.transaction_all.queryResults.row.slice(-100);
+
     const name = data.transaction_all.queryResults.row[0].name_display_first_last;
     const team = data.transaction_all.queryResults.row[0].team;
     const note = data.transaction_all.queryResults.row[0].note;
-//     console.log(name + ` of the 
 
-// ` + team + `: ` + note);
+// Getting and displaying the date of the first transaction on the list--Start
+const transactionDateYear = allPlayers[0].trans_date.slice(0, 4);
+const transactionDateMonth = allPlayers[0].trans_date.slice(5, 7);
+const transactionDateMonthName = monthNames[transactionDateMonth - 1];
+const transactionDateDay = allPlayers[0].trans_date.slice(8, 10);
+document.getElementById("headline-dates").innerText = `The most recent 100 transactions since ${transactionDateDay} ${transactionDateMonthName} ${transactionDateYear}.`
+// Getting and displaying the date of the first transaction on the list--End
 
 
-//     console.log(allPlayers[5]);
 
     for (let i = (allPlayers.length - 1); i > -1; i--) {
 
-        let transactionDate = allPlayers[i].trans_date.slice(0, 10);
-        // console.log(transactionDate + `: ` + allPlayers[i].name_display_first_last + ` of the ` + allPlayers[i].team);
+        const transactionDate = allPlayers[i].trans_date.slice(0, 10);
 
         // Team colors!
 
@@ -278,10 +257,11 @@ async function getTransactionData() {
 
 
 
-infoSection.setAttribute("class", `${allPlayers[i].team} ${allPlayers[i].from_team}`);
-console.log(infoSection.className);
+        infoSection.setAttribute("class", `${allPlayers[i].team} ${allPlayers[i].from_team}`);
+
 
     }
+
 
 
 
