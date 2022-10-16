@@ -25,7 +25,7 @@ const listMaker = document.getElementById("transaction-list");
 let teamColor1 = `white`;
 let teamColor2 = `black`;
 
-let highlightTeam = `all`;
+let highlightTeam = `Major League Baseball`;
 
 const MLBTeamNames = ["Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Red Sox", "Chicago White Sox", "Chicago Cubs", "Cincinnati Reds", "Cleveland Guardians", "Colorado Rockies", "Detroit Tigers", "Houston Astros", "Kansas City Royals", "Los Angeles Angels", "Los Angeles Dodgers", "Miami Marlins", "Milwaukee Brewers", "Minnesota Twins", "New York Yankees", "New York Mets", "Oakland Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Diego Padres", "San Francisco Giants", "Seattle Mariners", "St. Louis Cardinals", "Tampa Bay Rays", "Texas Rangers", "Toronto Blue Jays", "Washington Nationals"];
 
@@ -38,7 +38,7 @@ async function getTransactionData() {
 
     //Restrict to only Giants--START
 
-    if (highlightTeam !== `all`) {
+    if (highlightTeam !== `Major League Baseball`) {
         for (let i = (allPlayers.length - 1); i > -1; i--) {
 
             if ((allPlayers[i].team === highlightTeam) || (allPlayers[i].from_team === highlightTeam)) {
@@ -64,7 +64,14 @@ async function getTransactionData() {
     const transactionDateMonth = allPlayers[0].trans_date.slice(5, 7);
     const transactionDateMonthName = monthNames[transactionDateMonth - 1];
     const transactionDateDay = allPlayers[0].trans_date.slice(8, 10);
-    document.getElementById("headline-dates").innerText = `The most recent 100 transactions since ${transactionDateDay} ${transactionDateMonthName} ${transactionDateYear}.`
+
+
+    if (highlightTeam === `Major League Baseball`) {
+        document.getElementById("headline-dates").innerText = `The 100 most recent ${highlightTeam} transactions since ${transactionDateDay} ${transactionDateMonthName} ${transactionDateYear}.`;
+    } else {
+        document.getElementById("headline-dates").innerText = `The 100 most recent transactions for the ${highlightTeam} since ${transactionDateDay} ${transactionDateMonthName} ${transactionDateYear}.`;
+    }
+
     // Getting and displaying the date of the first transaction on the list--End
 
 
@@ -301,9 +308,55 @@ async function getTransactionData() {
 
 getTransactionData();
 
+function highlightAll() {
+    highlightTeam = `Major League Baseball`;
 
-function highlightGiants() {
-    console.log(highlightTeam);
+    function removeAllPlayerData(listMaker) {
+        while (listMaker.firstChild) {
+            listMaker.removeChild(listMaker.firstChild);
+        }
+    }
+    listMaker.innerHTML = "";
+    getTransactionData();
+}
+
+function highlightArizona() {
+    highlightTeam = `Arizona Diamondbacks`;
+
+    function removeAllPlayerData(listMaker) {
+        while (listMaker.firstChild) {
+            listMaker.removeChild(listMaker.firstChild);
+        }
+    }
+    listMaker.innerHTML = "";
+    getTransactionData();
+}
+
+function highlightAtlanta() {
+    highlightTeam = `Atlanta Braves`;
+
+    function removeAllPlayerData(listMaker) {
+        while (listMaker.firstChild) {
+            listMaker.removeChild(listMaker.firstChild);
+        }
+    }
+    listMaker.innerHTML = "";
+    getTransactionData();
+}
+
+function highlightBaltimore() {
+    highlightTeam = `Baltimore Orioles`;
+
+    function removeAllPlayerData(listMaker) {
+        while (listMaker.firstChild) {
+            listMaker.removeChild(listMaker.firstChild);
+        }
+    }
+    listMaker.innerHTML = "";
+    getTransactionData();
+}
+
+function highlightSanFrancisco() {
     highlightTeam = `San Francisco Giants`;
 
     function removeAllPlayerData(listMaker) {
@@ -311,11 +364,6 @@ function highlightGiants() {
             listMaker.removeChild(listMaker.firstChild);
         }
     }
-
-    // if (document.getElementById("player-display")) {
-    //     listMaker.removeChild(document.getElementById("player-display"));
-    // }
     listMaker.innerHTML = "";
     getTransactionData();
-    console.log(highlightTeam);
 }

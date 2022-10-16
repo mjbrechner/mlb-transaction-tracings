@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>MJB Transaction Tracings</title>
+    <title>MLB Transaction Tracings</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicons created by M.J. Brechner © 2022 -->
@@ -19,16 +19,19 @@
 
 <body>
     <header>
-        <h1>MJB Transaction Tracings</p>
-            <h3 id="headline-dates">The most recent transactions.</h3>
+        <h1>MLB Transaction Tracings</p>
+            <h3 id="headline-dates">Loading up the most recent transactions...</h3>
     </header>
-    
+
 
     <main>
         <div class="main-container">
             <div id="menu">Menu here
-
-                <button id="button-test" onclick="highlightGiants()">Giants</button>
+                <div class="menu-item" onclick="highlightAll()">All teams</div>
+                <div class="menu-item" onclick="highlightArizona()">Arizona Diamondbacks</div>
+                <div class="menu-item" onclick="highlightAtlanta()">Atlanta Braves</div>
+                <div class="menu-item" onclick="highlightBaltimore()">Baltimore Orioles</div>
+                <div class="menu-item" onclick="highlightSanFrancisco()">San Francisco Giants</div>
             </div>
             <div id="transaction-list"></div>
 
