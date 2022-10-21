@@ -11,22 +11,33 @@ body {
     font-size: 1.2em;
 }
 
+a {
+    color: #E2DCC8;
+}
+
 header {
     text-align: center;
 }
 
 .main-container {
     display: flex;
+
 }
 
 #menu {
+    background-color: #E2DCC8;
     flex-direction: column;
     gap: 5px;
     width: fit-content;
+    height: fit-content;
     padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .menu-item {
+    background-color: #0F3D3E;
     padding: 5px;
     border-radius: 5px;
     border-style: solid;
@@ -39,16 +50,16 @@ header {
     display: flex;
     flex-direction: column;
     width: fit-content;
-    margin: 2px;
+    margin: 0 2px;
     padding: 5px;
     border-radius: 5px;
 
 }
 
 #player-display {
-    width: 600px;
-    padding: 3px 10px;
-    margin: 2px;
+    width: 750px;
+    padding: 5px 10px;
+    margin: 1px;
     /* border: 2px;
     border-style: solid; */
     border-radius: 5px;
@@ -57,6 +68,14 @@ header {
 #player-details1,
 #player-details2 {
     display: none;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .5em;
 }
 
 .profile-pic {
