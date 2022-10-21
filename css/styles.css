@@ -21,7 +21,7 @@ header {
 
 .main-container {
     display: flex;
-
+    padding: 1%;
 }
 
 #menu {
@@ -49,7 +49,7 @@ header {
     background-color: #E2DCC8;
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 80%;
     margin: 0 2px;
     padding: 5px;
     border-radius: 5px;
@@ -57,7 +57,7 @@ header {
 }
 
 #player-display {
-    width: 750px;
+    width: auto;
     padding: 5px 10px;
     margin: 1px;
     /* border: 2px;
