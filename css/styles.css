@@ -17,8 +17,32 @@ a {
 
 header {
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
+.header-title {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.baseball-icon {
+    width: 3em;
+    height: 3em;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h3 {
+    margin: 0 0 1em;
+}
 .main-container {
     display: flex;
     padding: 1%;

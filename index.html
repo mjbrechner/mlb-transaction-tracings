@@ -8,10 +8,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicons created by M.J. Brechner © 2022 -->
-    <!-- <link rel="shortcut icon" href="images/favicon-32.png" sizes="32x32">
+    <link rel="shortcut icon" href="images/favicon-32.png" sizes="32x32">
     <link rel="shortcut icon" href="images/favicon-128.png" sizes="128x128">
     <link rel="shortcut icon" href="images/favicon-180.png" sizes="180x180">
-    <link rel="shortcut icon" href="images/favicon-192.png" sizes="192x192"> -->
+    <link rel="shortcut icon" href="images/favicon-192.png" sizes="192x192">
     <link rel="stylesheet" href="css/styles.css">
     <!-- add Google Fonts -->
 
@@ -19,8 +19,14 @@
 
 <body>
     <header>
-        <h1>MLB Transaction Tracings</p>
-            <h3 id="headline-dates">Loading up the most recent transactions...</h3>
+        
+        <div class="header-title">
+            <div><img class="baseball-icon" src="images/favicon-128.png"></div>
+            <div><h1>MLB Transaction Tracings</div>
+            <div><img class="baseball-icon" src="images/favicon-128.png"></div>
+        </div>
+        
+        <h3 id="headline-dates">Loading up the most recent transactions...</h3>
     </header>
 
 
@@ -59,7 +65,7 @@
                 <div class="menu-item" onclick="highlightTorontoBlueJays()">Toronto Blue Jays</div>
                 <div class="menu-item" onclick="highlightWashingtonNationals()">Washington Nationals</div>
             </div>
-            
+
             <div id="transaction-list"></div>
 
         </div>
