@@ -13,19 +13,22 @@
     <link rel="shortcut icon" href="images/favicon-180.png" sizes="180x180">
     <link rel="shortcut icon" href="images/favicon-192.png" sizes="192x192">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/team-colors.css">
     <!-- add Google Fonts -->
 
 </head>
 
 <body>
     <header>
-        
+
         <div class="header-title">
             <div><img class="baseball-icon" src="images/favicon-128.png"></div>
-            <div><h1>MLB Transaction Tracings</div>
+            <div>
+                <h1>MLB Transaction Tracings
+            </div>
             <div><img class="baseball-icon" src="images/favicon-128.png"></div>
         </div>
-        
+
         <h3 id="headline-dates">Loading up the most recent transactions...</h3>
     </header>
 
@@ -33,44 +36,137 @@
     <main>
         <div class="main-container">
             <div id="menu">
-                <div class="menu-item" onclick="highlightAll()">View All Teams</div>
-                <div class="menu-item" onclick="highlightArizonaDiamondbacks()">Arizona Diamondbacks</div>
-                <div class="menu-item" onclick="highlightAtlantaBraves()">Atlanta Braves</div>
-                <div class="menu-item" onclick="highlightBaltimoreOrioles()">Baltimore Orioles</div>
-                <div class="menu-item" onclick="highlightBostonRedSox()">Boston Red Sox</div>
-                <div class="menu-item" onclick="highlightChicagoCubs()">Chicago Cubs</div>
-                <div class="menu-item" onclick="highlightChicagoWhiteSox()">Chicago White Sox</div>
-                <div class="menu-item" onclick="highlightCincinnatiReds()">Cincinnati Reds</div>
-                <div class="menu-item" onclick="highlightClevelandGuardians()">Cleveland Guardians</div>
-                <div class="menu-item" onclick="highlightColoradoRockies()">Colorado Rockies</div>
-                <div class="menu-item" onclick="highlightDetroitTigers()">Detroit Tigers</div>
-                <div class="menu-item" onclick="highlightHoustonAstros()">Houston Astros</div>
-                <div class="menu-item" onclick="highlightKansasCityRoyals()">Kansas City Royals</div>
-                <div class="menu-item" onclick="highlightLosAngelesAngels()">Los Angeles Angels</div>
-                <div class="menu-item" onclick="highlightLosAngelesDodgers()">Los Angeles Dodgers</div>
-                <div class="menu-item" onclick="highlightMiamiMarlins()">Miami Marlins</div>
-                <div class="menu-item" onclick="highlightMilwaukeeBrewers()">Milwaukee Brewers</div>
-                <div class="menu-item" onclick="highlightMinnesotaTwins()">Minnesota Twins</div>
-                <div class="menu-item" onclick="highlightNewYorkMets()">New York Mets</div>
-                <div class="menu-item" onclick="highlightNewYorkYankees()">New York Yankees</div>
-                <div class="menu-item" onclick="highlightOaklandAthletics()">Oakland Athletics</div>
-                <div class="menu-item" onclick="highlightPhiladelphiaPhillies()">Philadelphia Phillies</div>
-                <div class="menu-item" onclick="highlightPittsburghPirates()">Pittsburgh Pirates</div>
-                <div class="menu-item" onclick="highlightSanDiegoPadres()">San Diego Padres</div>
-                <div class="menu-item" onclick="highlightSanFranciscoGiants()">San Francisco Giants</div>
-                <div class="menu-item" onclick="highlightSeattleMariners()">Seattle Mariners</div>
-                <div class="menu-item" onclick="highlightStLouisCardinals()">St. Louis Cardinals</div>
-                <div class="menu-item" onclick="highlightTampaBayRays()">Tampa Bay Rays</div>
-                <div class="menu-item" onclick="highlightTexasRangers()">Texas Rangers</div>
-                <div class="menu-item" onclick="highlightTorontoBlueJays()">Toronto Blue Jays</div>
-                <div class="menu-item" onclick="highlightWashingtonNationals()">Washington Nationals</div>
+                <div class="menu-item" onclick="highlightAll()">
+                    <div class="team-color-indicator colors-mlb">&nbsp;</div>
+                    <div class="team-names" id="menu-mlb">View All Teams</div>
+                </div>
+                <div class="menu-item" onclick="highlightArizonaDiamondbacks()">
+                    <div class="team-color-indicator colors-diamondbacks">&nbsp;</div>
+                    <div class="team-names" id="menu-diamondbacks">Arizona Diamondbacks</div>
+                </div>
+                <div class="menu-item" onclick="highlightAtlantaBraves()">
+                    <div class="team-color-indicator colors-braves">&nbsp;</div>
+                    <div class="team-names" id="menu-braves">Atlanta Braves</div>
+                </div>
+                <div class="menu-item" onclick="highlightBaltimoreOrioles()">
+                    <div class="team-color-indicator colors-orioles">&nbsp;</div>
+                    <div class="team-names" id="menu-orioles">Baltimore Orioles</div>
+                </div>
+                <div class="menu-item" onclick="highlightBostonRedSox()">
+                    <div class="team-color-indicator colors-red-sox">&nbsp;</div>
+                    <div class="team-names" id="menu-red-sox">Boston Red Sox</div>
+                </div>
+                <div class="menu-item" onclick="highlightChicagoCubs()">
+                    <div class="team-color-indicator colors-cubs">&nbsp;</div>
+                    <div class="team-names" id="menu-cubs">Chicago Cubs</div>
+                </div>
+                <div class="menu-item" onclick="highlightChicagoWhiteSox()">
+                    <div class="team-color-indicator colors-white-sox">&nbsp;</div>
+                    <div class="team-names" id="menu-white-sox">Chicago White Sox</div>
+                </div>
+                <div class="menu-item" onclick="highlightCincinnatiReds()">
+                    <div class="team-color-indicator colors-reds">&nbsp;</div>
+                    <div class="team-names" id="menu-reds">Cincinnati Reds</div>
+                </div>
+                <div class="menu-item" onclick="highlightClevelandGuardians()">
+                    <div class="team-color-indicator colors-guardians">&nbsp;</div>
+                    <div class="team-names" id="menu-guardians">Cleveland Guardians</div>
+                </div>
+                <div class="menu-item" onclick="highlightColoradoRockies()">
+                    <div class="team-color-indicator colors-rockies">&nbsp;</div>
+                    <div class="team-names" id="menu-rockies">Colorado Rockies</div>
+                </div>
+                <div class="menu-item" onclick="highlightDetroitTigers()">
+                    <div class="team-color-indicator colors-tigers">&nbsp;</div>
+                    <div class="team-names" id="menu-tigers">Detroit Tigers</div>
+                </div>
+                <div class="menu-item" onclick="highlightHoustonAstros()">
+                    <div class="team-color-indicator colors-astros">&nbsp;</div>
+                    <div class="team-names" id="menu-astros">Houston Astros</div>
+                </div>
+                <div class="menu-item" onclick="highlightKansasCityRoyals()">
+                    <div class="team-color-indicator colors-royals">&nbsp;</div>
+                    <div class="team-names" id="menu-royals">Kansas City Royals</div>
+                </div>
+                <div class="menu-item" onclick="highlightLosAngelesAngels()">
+                    <div class="team-color-indicator colors-angels">&nbsp;</div>
+                    <div class="team-names" id="menu-angels">Los Angeles Angels</div>
+                </div>
+                <div class="menu-item" onclick="highlightLosAngelesDodgers()">
+                    <div class="team-color-indicator colors-dodgers">&nbsp;</div>
+                    <div class="team-names" id="menu-dodgers">Los Angeles Dodgers</div>
+                </div>
+                <div class="menu-item" onclick="highlightMiamiMarlins()">
+                    <div class="team-color-indicator colors-marlins">&nbsp;</div>
+                    <div class="team-names" id="menu-marlins">Miami Marlins</div>
+                </div>
+                <div class="menu-item" onclick="highlightMilwaukeeBrewers()">
+                    <div class="team-color-indicator colors-brewers">&nbsp;</div>
+                    <div class="team-names" id="menu-brewers">Milwaukee Brewers</div>
+                </div>
+                <div class="menu-item" onclick="highlightMinnesotaTwins()">
+                    <div class="team-color-indicator colors-twins">&nbsp;</div>
+                    <div class="team-names" id="menu-twins">Minnesota Twins</div>
+                </div>
+                <div class="menu-item" onclick="highlightNewYorkMets()">
+                    <div class="team-color-indicator colors-mets">&nbsp;</div>
+                    <div class="team-names" id="menu-mets">New York Mets</div>
+                </div>
+                <div class="menu-item" onclick="highlightNewYorkYankees()">
+                    <div class="team-color-indicator colors-yankees">&nbsp;</div>
+                    <div class="team-names" id="menu-yankees">New York Yankees</div>
+                </div>
+                <div class="menu-item" onclick="highlightOaklandAthletics()">
+                    <div class="team-color-indicator colors-athletics">&nbsp;</div>
+                    <div class="team-names" id="menu-athletics">Oakland Athletics</div>
+                </div>
+                                <div class="menu-item" onclick="highlightPhiladelphiaPhillies()">
+                    <div class="team-color-indicator colors-phillies">&nbsp;</div>
+                    <div class="team-names" id="menu-phillies">Philadelphia Phillies</div>
+                </div>
+                                <div class="menu-item" onclick="highlightPittsburghPirates()">
+                    <div class="team-color-indicator colors-pirates">&nbsp;</div>
+                    <div class="team-names" id="menu-pirates">Pittsburgh Pirates</div>
+                </div>
+                                <div class="menu-item" onclick="highlightSanDiegoPadres()">
+                    <div class="team-color-indicator colors-padres">&nbsp;</div>
+                    <div class="team-names" id="menu-padres">San Diego Padres</div>
+                </div>
+                                                <div class="menu-item" onclick="highlightSanFranciscoGiants()">
+                    <div class="team-color-indicator colors-giants">&nbsp;</div>
+                    <div class="team-names" id="menu-giants">San Francisco Giants</div>
+                </div>
+                                                <div class="menu-item" onclick="highlightSeattleMariners()">
+                    <div class="team-color-indicator colors-mariners">&nbsp;</div>
+                    <div class="team-names" id="menu-mariners">Seattle Mariners</div>
+                </div>
+                                                <div class="menu-item" onclick="highlightStLouisCardinals()">
+                    <div class="team-color-indicator colors-cardinals">&nbsp;</div>
+                    <div class="team-names" id="menu-cardinals">St. Louis Cardinals</div>
+                </div>
+                                                                <div class="menu-item" onclick="highlightTampaBayRays()">
+                    <div class="team-color-indicator colors-rays">&nbsp;</div>
+                    <div class="team-names" id="menu-rays">Tampa Bay Rays</div>
+                </div>
+                                                                <div class="menu-item" onclick="highlightTexasRangers()">
+                    <div class="team-color-indicator colors-rangers">&nbsp;</div>
+                    <div class="team-names" id="menu-rangers">Texas Rangers</div>
+                </div>
+                                                                                <div class="menu-item" onclick="highlightTorontoBlueJays()">
+                    <div class="team-color-indicator colors-blue-jays">&nbsp;</div>
+                    <div class="team-names" id="menu-blue-jays">Toronto Blue Jays</div>
+                </div>
+                                                                                <div class="menu-item" onclick="highlightWashingtonNationals()">
+                    <div class="team-color-indicator colors-nationals">&nbsp;</div>
+                    <div class="team-names" id="menu-nationals">Washington Nationals</div>
+                </div>
             </div>
 
             <div id="transaction-list"></div>
 
         </div>
     </main>
-
+    <script src="javascript/menu-reset.js" async defer></script>
     <script src="javascript/testing.js" async defer></script>
     <footer>
         <p>© 2022 <a href="https://github.com/mjbrechner">M.J. Brechner</a></p>

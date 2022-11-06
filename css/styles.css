@@ -1,18 +1,22 @@
 /* Palette from Color Hunt
-https://colorhunt.co/palette/100f0f0f3d3ee2dcc8f1f1f1
-#100F0F
-#0F3D3E
-#E2DCC8
-#F1F1F1 */
+https://colorhunt.co/palette/faf1e6fdfaf6e4efe7064420
+https://colorhunt.co/palette/fff8ea594545815b5b594545
+#FAF1E6
+#FDFAF6
+#E4EFE7
+#064420 */
 
 body {
-    background-color: #0F3D3E;
-    color: #E2DCC8;
+    background-color: #FAF1E6;
+    color: #064420;
     font-size: 1.2em;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 5px;
 }
 
 a {
-    color: #E2DCC8;
+    color: #064420;
 }
 
 header {
@@ -43,13 +47,14 @@ h1 {
 h3 {
     margin: 0 0 1em;
 }
+
 .main-container {
     display: flex;
     padding: 1%;
 }
 
 #menu {
-    background-color: #E2DCC8;
+    background-color: #594545;
     flex-direction: column;
     gap: 5px;
     width: fit-content;
@@ -61,8 +66,10 @@ h3 {
 }
 
 .menu-item {
-    background-color: #0F3D3E;
-    padding: 5px;
+    background-color: #FAF1E6;
+    display: flex;
+    flex-direction: row;
+    /* padding: 5px 5px 5px 0; */
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
@@ -70,7 +77,7 @@ h3 {
 }
 
 #transaction-list {
-    background-color: #E2DCC8;
+    background-color: #594545;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -94,7 +101,6 @@ h3 {
     display: none;
 }
 
-
 footer {
     display: flex;
     flex-direction: column;
@@ -105,4 +111,14 @@ footer {
 .profile-pic {
     width: 3em;
     height: 3em;
+}
+
+.team-names {
+    padding: 5px;
+    width: 10em;
+}
+
+.team-color-indicator {
+    width: 5%;
+    height: auto;
 }
