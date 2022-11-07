@@ -1,6 +1,8 @@
 body {
     background-color: #FAF1E6;
     color: #413d3d;
+    font-family: 'Chivo', sans-serif;
+    font-weight: 400;
     font-size: 1.2em;
     border-radius: 5px;
     border-style: solid;
@@ -29,17 +31,37 @@ header {
     align-items: center;
 }
 
-.baseball-icon {
+/* .circle-decoration {
+    background-color: #413d3d;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+} */
+/* .baseball-icon {
     width: 3em;
     height: 3em;
-}
+    display: none;
+} */
 
 h1 {
     font-size: 3em;
+    font-weight: 900;
 }
 
+/* #page-body {
+    margin: 10px 100px 0;
+    border-radius: 50px;
+} */
+
 h3 {
+    font-weight: 700;
+    padding: .25em;
     margin: 0 0 1em;
+}
+
+main {
+    display: flex;
+    justify-content: center;
 }
 
 .main-container {
@@ -47,13 +69,14 @@ h3 {
     padding: 1%;
 }
 
-#menu {
+.menu {
+    font-weight: 700;
     background-color: #413d3d;
     flex-direction: column;
-    gap: 5px;
+    /* gap: 5px; */
     width: fit-content;
     height: fit-content;
-    padding: 5px;
+    padding: 1px;
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
@@ -63,7 +86,6 @@ h3 {
     background-color: #FAF1E6;
     display: flex;
     flex-direction: row;
-    /* padding: 5px 5px 5px 0; */
     border-radius: 5px;
     border-style: solid;
     border-width: 1px;
@@ -96,7 +118,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: .5em;
+    margin-bottom: .25em;
 }
 
 .profile-pic {

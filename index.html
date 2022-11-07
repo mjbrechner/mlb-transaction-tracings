@@ -15,25 +15,29 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/team-colors.css">
     <!-- add Google Fonts -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header id="page-body">
-            <div class="header-title">
-                <div><img class="baseball-icon" src="images/favicon-128.png"></div>
-                <div>
-                    <h1>MLB Transaction Tracings
-                </div>
-                <div><img class="baseball-icon" src="images/favicon-128.png"></div>
+        <div class="header-title">
+            <div class="circle-decoration"></div>
+            <!-- <div><img class="baseball-icon" src="images/favicon-128.png"></div> -->
+            <div>
+                <h1>MLB Transaction Tracings
             </div>
-            <h3 id="headline-dates">Loading up the most recent transactions...</h3>
+            <div class="circle-decoration"></div>
+            <!-- <div><img class="baseball-icon" src="images/favicon-128.png"></div> -->
+        </div>
+        <h3 id="headline-dates">Loading up the most recent transactions...</h3>
     </header>
 
 
     <main>
         <div class="main-container">
-            <div id="menu">
+            <div class="menu">
                 <div class="menu-item" onclick="highlightAll()">
                     <div class="team-color-indicator colors-mlb">&nbsp;</div>
                     <div class="team-names" id="menu-mlb">View All Teams</div>
@@ -98,6 +102,13 @@
                     <div class="team-color-indicator colors-marlins">&nbsp;</div>
                     <div class="team-names" id="menu-marlins">Miami Marlins</div>
                 </div>
+
+            </div>
+            <div class="transaction-list-container">
+                <div id="transaction-list"></div>
+            </div>
+
+            <div class="menu">
                 <div class="menu-item" onclick="highlightMilwaukeeBrewers()">
                     <div class="team-color-indicator colors-brewers">&nbsp;</div>
                     <div class="team-names" id="menu-brewers">Milwaukee Brewers</div>
@@ -159,9 +170,6 @@
                     <div class="team-names" id="menu-nationals">Washington Nationals</div>
                 </div>
             </div>
-
-            <div id="transaction-list"></div>
-
         </div>
     </main>
     <script src="javascript/menu-reset.js" async defer></script>
