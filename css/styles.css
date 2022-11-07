@@ -1,14 +1,6 @@
-/* Palette from Color Hunt
-https://colorhunt.co/palette/faf1e6fdfaf6e4efe7064420
-https://colorhunt.co/palette/fff8ea594545815b5b594545
-#FAF1E6
-#FDFAF6
-#E4EFE7
-#064420 */
-
 body {
     background-color: #FAF1E6;
-    color: #064420;
+    color: #413d3d;
     font-size: 1.2em;
     border-radius: 5px;
     border-style: solid;
@@ -16,13 +8,15 @@ body {
 }
 
 a {
-    color: #064420;
+    color: #413d3d;
 }
 
 header {
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 1% 3%;
+    border-radius: 50px;
 }
 
 .header-title {
@@ -54,7 +48,7 @@ h3 {
 }
 
 #menu {
-    background-color: #594545;
+    background-color: #413d3d;
     flex-direction: column;
     gap: 5px;
     width: fit-content;
@@ -77,22 +71,19 @@ h3 {
 }
 
 #transaction-list {
-    background-color: #594545;
+    /* background-color: #413d3d; */
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 0 2px;
     padding: 5px;
     border-radius: 5px;
-
 }
 
 #player-display {
     width: auto;
     padding: 5px 10px;
     margin: 1px;
-    /* border: 2px;
-    border-style: solid; */
     border-radius: 5px;
 }
 
