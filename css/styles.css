@@ -53,28 +53,24 @@ h1 {
     border-radius: 50px;
 } */
 
+
 h3 {
     font-weight: 700;
     padding: .25em;
     margin: 0 0 1em;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-}
-
 .main-container {
     display: flex;
     padding: 1%;
+    justify-content: space-between;
 }
 
 .menu {
     font-weight: 700;
     background-color: #413d3d;
     flex-direction: column;
-    /* gap: 5px; */
-    width: fit-content;
+    width: 13em;
     height: fit-content;
     padding: 1px;
     border-radius: 5px;
@@ -84,6 +80,7 @@ main {
 
 .menu-item {
     background-color: #FAF1E6;
+    /* width: fit-content; */
     display: flex;
     flex-direction: row;
     border-radius: 5px;
@@ -93,10 +90,9 @@ main {
 }
 
 #transaction-list {
-    /* background-color: #413d3d; */
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: auto;
     margin: 0 2px;
     padding: 5px;
     border-radius: 5px;
@@ -128,10 +124,32 @@ footer {
 
 .team-names {
     padding: 5px;
-    width: 10em;
+    width: 100%;
 }
 
 .team-color-indicator {
-    width: 5%;
+    width: 10px;
     height: auto;
+}
+
+
+/*tablet query*/
+@media only screen and (min-width: 768px) {
+ #transaction-list {
+        width: 20em;
+    } 
+}
+
+/*desktop query*/
+@media only screen and (min-width: 992px) {
+#transaction-list {
+    width: 40em;
+}
+}
+
+/*Huge screen query*/
+@media only screen and (min-width: 1200) {
+#transaction-list {
+    width: 40em;
+}
 }

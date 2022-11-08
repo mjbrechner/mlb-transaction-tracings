@@ -66,4 +66,6 @@ function menuReset() {
     document.getElementById("page-body").classList.remove("colors-blue-jays");
     document.getElementById("page-body").classList.remove("colors-nationals");
 
+    // Hide footer to prevent it flashing up when transaction-list is re-populating with data
+    document.getElementById("footer-section").style.visibility = "hidden";
 }

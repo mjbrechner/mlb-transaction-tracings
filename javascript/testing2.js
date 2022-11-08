@@ -86,30 +86,13 @@ async function getTransactionData() {
         infoSection.style.backgroundColor = teamColor1;
         infoSection.style.color = teamColor2;
 
-
-        // testing MLBteam set
-
-        // for (const e of MLBTeams) {
-        //     if (e.teamName === allPlayers[i].team) {
-        //         infoSection.style.color = e.teamColors.c2;
-        //         infoSection.style.border = `3px solid` + e.teamColors.c1;
-        //         break;
-        //     } else if (e.teamName === allPlayers[i].from_team) {
-        //         infoSection.style.color = e.teamColors.c2;
-        //         infoSection.style.border = `1px solid` + e.teamColors.c1;
-        //         break;
-        //     } else {
-        //         infoSection.style.backgroundColor = "#FAF1E6";
-        //         infoSection.style.color = "#413d3d";
-        //     }
-        // };
-
-        // end testing MLBteam set
-
         listMaker.appendChild(infoSection);
         infoSection.setAttribute("id", "player-display");
         infoSection.setAttribute("class", `${allPlayers[i].team} ${allPlayers[i].from_team}`);
     }
+
+    // Reveal footer, which had been hidden while transaction-list data re-populates with data
+    document.getElementById("footer-section").style.visibility = "visible";
 }
 
 // Run the main function to obtain and populate the data
