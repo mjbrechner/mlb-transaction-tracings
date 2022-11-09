@@ -1,6 +1,10 @@
 'use strict';
 
 function menuReset() {
+
+    //Scroll to the top of the document
+    window.scrollTo(0, 0);
+
     // Clear existing menu selections of color highlighting
     document.getElementById("menu-mlb").classList.remove("colors-mlb");
     document.getElementById("menu-diamondbacks").classList.remove("colors-diamondbacks");
