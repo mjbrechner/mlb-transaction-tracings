@@ -17,8 +17,29 @@ header {
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 1% 3%;
-    border-radius: 50px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.hamburger-menu {
+    position: absolute;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 10px 0 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hamburger-lines {
+    width: 1.5em;
+    height: .25em;
+    margin: .25em 0;
+    background-color: #FAF1E6;
+    border-radius: 5px;
+}
+
+.hamburger-menu:hover .hamburger-lines {
+    background-color: #413d3d;
 }
 
 .header-title {
@@ -70,17 +91,22 @@ h3 {
     font-weight: 700;
     background-color: #413d3d;
     flex-direction: column;
-    width: 13em;
+    width: 100%;
     height: fit-content;
-    padding: 1px;
     border-radius: 5px;
-    border-style: solid;
     border-width: 1px;
+}
+
+#menu-left {
+    order: 1;
+}
+
+#menu-right {
+    order: 3;
 }
 
 .menu-item {
     background-color: #FAF1E6;
-    /* width: fit-content; */
     display: flex;
     flex-direction: row;
     border-radius: 5px;
@@ -92,6 +118,7 @@ h3 {
 #transaction-list {
     display: flex;
     flex-direction: column;
+    order: 2;
     width: auto;
     margin: 0 2px;
     padding: 5px;
@@ -132,24 +159,53 @@ footer {
     height: auto;
 }
 
+/*mobile query*/
+@media only screen and (min-width: 1px) {
+    .main-container {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+}
 
 /*tablet query*/
 @media only screen and (min-width: 768px) {
- #transaction-list {
+    header {
+        margin: 1% 3%;
+        border-radius: 50px;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+    .main-container {
+        display: flex;
+    }
+
+    .menu {
+        display: flex;
+        width: 13em;
+        padding: 1px;
+        border-style: solid;
+    }
+
+    #transaction-list {
         width: 20em;
-    } 
+    }
 }
 
 /*desktop query*/
 @media only screen and (min-width: 992px) {
-#transaction-list {
-    width: 40em;
-}
+    #transaction-list {
+        width: 40em;
+    }
 }
 
 /*Huge screen query*/
 @media only screen and (min-width: 1200) {
-#transaction-list {
-    width: 40em;
-}
+    #transaction-list {
+        width: 40em;
+    }
 }

@@ -22,6 +22,12 @@
 
 <body>
     <header id="page-body">
+        <div class="hamburger-menu" onclick="toggleHamburger()">
+            <div class="hamburger-lines"></div>
+            <div class="hamburger-lines"></div>
+            <div class="hamburger-lines"></div>
+        </div>
+        </div>
         <div class="header-title">
             <div class="circle-decoration"></div>
             <!-- <div><img class="baseball-icon" src="images/favicon-128.png"></div> -->
@@ -36,7 +42,7 @@
 
     <main>
         <div class="main-container">
-            <div class="menu">
+            <div class="menu" id="menu-left">
                 <div class="menu-item" onclick="highlightAll()">
                     <div class="team-color-indicator colors-mlb">&nbsp;</div>
                     <div class="team-names" id="menu-mlb">View All Teams</div>
@@ -101,13 +107,9 @@
                     <div class="team-color-indicator colors-marlins">&nbsp;</div>
                     <div class="team-names" id="menu-marlins">Miami Marlins</div>
                 </div>
-
-            </div>
-            <div class="transaction-list-container">
-                <div id="transaction-list"></div>
             </div>
 
-            <div class="menu">
+            <div class="menu" id="menu-right">
                 <div class="menu-item" onclick="highlightMilwaukeeBrewers()">
                     <div class="team-color-indicator colors-brewers">&nbsp;</div>
                     <div class="team-names" id="menu-brewers">Milwaukee Brewers</div>
@@ -169,6 +171,7 @@
                     <div class="team-names" id="menu-nationals">Washington Nationals</div>
                 </div>
             </div>
+            <div id="transaction-list"></div>
         </div>
     </main>
     <footer id="footer-section">
@@ -176,6 +179,7 @@
         <!-- Profile picture created by M.J. Brechner © 2022 -->
         <img class="profile-pic" src="images/profile-pic.png">
     </footer>
+    <script src="javascript/hamburger-menu.js" async defer></script>
     <script src="javascript/menu-reset.js" async defer></script>
     <script src="javascript/testing2.js" async defer></script>
 </body>
