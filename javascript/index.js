@@ -7,7 +7,7 @@ let highlightTeam = `Major League Baseball`;
 let teamColor1 = "#FAF1E6";
 let teamColor2 = "#413d3d";
 document.getElementById("menu-mlb").classList.add("colors-mlb");
-document.getElementById("page-body").classList.add("colors-mlb");
+document.getElementById("header-section").classList.add("colors-mlb");
 // Set defaults and MLB color scheme elements--END
 
 // Main function to obtain and process API data
