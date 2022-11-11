@@ -72,4 +72,7 @@ function menuReset() {
 
     // Hide footer to prevent it flashing up when transaction-list is re-populating with data
     document.getElementById("footer-section").style.visibility = "hidden";
+
+    //Unhide header section, in case it had been hidden due to the opening of the hamburger menu
+    document.getElementById("header-section").style.display = "block";
 }
