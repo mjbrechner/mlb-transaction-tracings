@@ -12,4 +12,3 @@ const year = today.getFullYear();
 const lastYear = today.getFullYear() - 1;
 const formattedLastYearDate = '' + lastYear + monthString + dayString;
 const formattedCurrentDate = '' + year + monthString + dayString;
-const transactionDateRange = `https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedLastYearDate + `'&end_date='` + formattedCurrentDate + `'`;

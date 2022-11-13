@@ -10,6 +10,8 @@ document.getElementById("menu-mlb").classList.add("colors-mlb");
 document.getElementById("header-section").classList.add("colors-mlb");
 // Set defaults and MLB color scheme elements--END
 
+const transactionDateRange = `https://lookup-service-prod.mlb.com/json/named.transaction_all.bam?sport_code='mlb'&start_date='` + formattedLastYearDate + `'&end_date='` + formattedCurrentDate + `'`;
+
 // Main function to obtain and process API data
 async function getTransactionData() {
     const response = await fetch(transactionDateRange);
@@ -48,9 +50,11 @@ async function getTransactionData() {
     transactionDateDay = daysOfTheMonth[(transactionDateDay - 1)];
 
     if (highlightTeam === `Major League Baseball`) {
-        document.getElementById("headline-dates").innerText = `The 100 most recent ${highlightTeam} transactions since ${transactionDateMonthName} ${transactionDateDay}, ${transactionDateYear}.`;
+        document.getElementById("headline-dates1").innerText = `The 100 most recent ${highlightTeam} transactions`;
+    document.getElementById("headline-dates2").innerText = `since ${transactionDateMonthName} ${transactionDateDay}, ${transactionDateYear}`;
     } else {
-        document.getElementById("headline-dates").innerText = `The 100 most recent transactions for the ${highlightTeam} since ${transactionDateMonthName} ${transactionDateDay}, ${transactionDateYear}.`;
+        document.getElementById("headline-dates1").innerText = `The 100 most recent transactions for the ${highlightTeam}`;
+        document.getElementById("headline-dates2").innerText = `since ${transactionDateMonthName} ${transactionDateDay}, ${transactionDateYear}`;
     }
     // Getting and displaying the date of the first transaction on the list--End
 

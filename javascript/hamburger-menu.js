@@ -2,20 +2,16 @@
 
 // Open and close hamburger menu
 function toggleHamburger() {
-    let e = document.getElementById("menu-left");
-    if (e.style.display === "block") {
-        e.style.display = "none";
+    const menuLeft = document.getElementById("menu-left");
+    const menuRight = document.getElementById("menu-right");
+    if (menuLeft.style.display === "block") {
+        menuLeft.style.display = "none";
+        menuRight.style.display = "none"
         document.getElementById("header-section").style.display = "block";
     } else {
-        e.style.display = "block"
+        menuLeft.style.display = "block"
+        menuRight.style.display = "block"
         document.getElementById("header-section").style.display = "none";
-    }
-
-    let e2 = document.getElementById("menu-right");
-    if (e2.style.display === "block") {
-        e2.style.display = "none";
-    } else {
-        e2.style.display = "block"
     }
 };
 

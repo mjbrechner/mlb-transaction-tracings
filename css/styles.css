@@ -74,8 +74,13 @@ h1 {
 h3 {
     font-weight: 700;
     font-size: .75em;
-    padding: .25em;
-    margin: 0 0 .25em;
+    margin: 0;
+    /* padding: .25em;
+    margin: 0 0 .25em; */
+}
+
+.subtitle {
+    padding-bottom: .5em;
 }
 
 .main-container {
@@ -174,9 +179,6 @@ footer {
         padding: 0 6% 0;
     }
 
-    h3 {
-        padding: .25em .5em .25em;
-    }
 }
 
 /*tablet query*/
@@ -193,8 +195,6 @@ footer {
 
     h3 {
         font-size: 1em;
-        padding: .25em;
-        margin: 0 0 .5em;
     }
 
     .hamburger-menu {
@@ -231,8 +231,6 @@ footer {
 
     h3 {
         font-size: 1.25em;
-        padding: .5em;
-        margin: 0 0 1em;
     }
 
     #transaction-list {
